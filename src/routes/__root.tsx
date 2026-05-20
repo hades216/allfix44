@@ -11,6 +11,7 @@ import {
 import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
+import logoUrl from "../assets/logo.png?url";
 import { CartProvider, useCart } from "@/components/site/cart/CartContext";
 import { CartDrawer } from "@/components/site/CartDrawer";
 import { FloatingCTA } from "@/components/site/FloatingCTA";
@@ -80,16 +81,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "AllFix Maintenance Services" },
+      { name: "description", content: "AllFix Maintenance Services – professional home & office maintenance solutions." },
+      { name: "author", content: "AllFix" },
+      { property: "og:title", content: "AllFix Maintenance Services" },
+      { property: "og:description", content: "Professional home & office maintenance solutions." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: logoUrl },
+      { rel: "apple-touch-icon", href: logoUrl },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
