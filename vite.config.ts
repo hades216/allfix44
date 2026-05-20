@@ -4,6 +4,7 @@ import netlifyPlugin from "@netlify/vite-plugin-tanstack-start";
 export default defineConfig({
   build: {
     outDir: "dist/public",
+    emptyOutDir: true,
   },
   tanstackStart: {
     server: { entry: "server" },
@@ -12,6 +13,7 @@ export default defineConfig({
     netlifyPlugin({
       edge: false,
       functions: "dist/functions",
+      publish: "dist/public",
     }),
   ],
 });

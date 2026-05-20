@@ -1,9 +1,7 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm install && npm run build 2>&1 | tee build.log"
   publish = "dist/public"
   functions = "dist/functions"
 
 [build.environment]
   NODE_VERSION = "20"
-  NPM_FLAGS = "--legacy-peer-deps"
-  NETLIFY_BUILD_ID = "20260520-fix"
