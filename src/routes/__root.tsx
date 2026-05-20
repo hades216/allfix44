@@ -9,6 +9,11 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { CartProvider, useCart } from "@/components/site/cart/CartContext";
+import { CartDrawer } from "@/components/site/CartDrawer";
+import { FloatingCTA } from "@/components/site/FloatingCTA";
+import { Toaster } from "@/components/ui/sonner";
+import { ShoppingCart } from "lucide-react";
 
 function NotFoundComponent() {
   return (
@@ -82,9 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap",
       },
     ],
   }),
@@ -113,7 +121,65 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <CartProvider>
+        <div className="min-h-screen bg-background flex flex-col">
+          <SiteNav />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <SiteFooter />
+        </div>
+        <FloatingCTA />
+        <CartDrawer />
+        <Toaster richColors position="top-center" />
+      </CartProvider>
     </QueryClientProvider>
+  );
+}
+
+function SiteNav() {
+  const { count, setOpen } = useCart();
+  return (
+    <nav className="sticky top-0 z-40 backdrop-blur-xl bg-background/85 border-b border-border">
+      <div className="container mx-auto px-4 h-14 flex items-center justify-between">
+        <div className="flex items-center gap-5 text-sm font-semibold">
+          <Link
+            to="/"
+            className="text-foreground hover:text-brand transition-colors"
+            activeProps={{ className: "text-brand" }}
+            activeOptions={{ exact: true }}
+          >
+            Home
+          </Link>
+          <Link
+            to="/contact"
+            className="text-foreground hover:text-brand transition-colors"
+            activeProps={{ className: "text-brand" }}
+          >
+            Contact
+          </Link>
+        </div>
+        <button
+          onClick={() => setOpen(true)}
+          aria-label="Open cart"
+          className="relative inline-flex items-center justify-center h-10 w-10 rounded-full text-foreground hover:bg-muted transition"
+        >
+          <ShoppingCart className="h-5 w-5" />
+          {count > 0 && (
+            <span className="absolute -top-0.5 -right-0.5 h-5 min-w-5 px-1 rounded-full bg-brand text-brand-foreground text-[11px] font-bold grid place-items-center shadow-glow">
+              {count}
+            </span>
+          )}
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">
+      © {new Date().getFullYear()} AllFix Maintenance Services
+    </footer>
   );
 }
