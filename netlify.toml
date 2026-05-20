@@ -1,7 +1,7 @@
 [build]
-  command = "rm -rf node_modules dist && npm install && npm run build"
-  publish = "dist/public"
-  functions = "dist/functions"
+  command = "npm install && npm run build"
+  publish = "dist/client"
 
 [build.environment]
   NODE_VERSION = "20"
+
