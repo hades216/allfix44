@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build 2>&1 | tee build.log"
+  command = "rm -rf node_modules dist && npm install && npm run build"
   publish = "dist/public"
   functions = "dist/functions"
 
