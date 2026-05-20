@@ -67,6 +67,39 @@ import plBathShower from "@/assets/services/plumber/bath-shower.jpg";
 import plWashbasin from "@/assets/services/plumber/washbasin.jpg";
 import electricianImg from "@/assets/services/home/electrician.jpg";
 import handymanImg from "@/assets/services/home/handyman.jpg";
+import elCeilingFanInstall from "@/assets/services/home/electrician/ceiling-fan-install.jpg";
+import elSmdLights from "@/assets/services/home/electrician/smd-lights.jpg";
+import elLedTvMount from "@/assets/services/home/electrician/led-tv-mount.jpg";
+import elSwitchButton from "@/assets/services/home/electrician/switch-button.jpg";
+import elChangeOver from "@/assets/services/home/electrician/change-over.jpg";
+import elPressureMotor from "@/assets/services/home/electrician/pressure-motor.jpg";
+import elSingleBreaker from "@/assets/services/home/electrician/single-breaker.jpg";
+import elDistributionBox from "@/assets/services/home/electrician/distribution-box.jpg";
+import elAutoTankSwitch from "@/assets/services/home/electrician/auto-tank-switch.jpg";
+import elWmRepair from "@/assets/services/home/electrician/wm-repair.jpg";
+import elFanDimmer from "@/assets/services/home/electrician/fan-dimmer.jpg";
+import elUpsRepair from "@/assets/services/home/electrician/ups-repair.jpg";
+import elUpsInstall from "@/assets/services/home/electrician/ups-install.jpg";
+import elExhaustFan from "@/assets/services/home/electrician/exhaust-fan.jpg";
+import elNewHouseWiring from "@/assets/services/home/electrician/new-house-wiring.jpg";
+import elPumpRepair from "@/assets/services/home/electrician/pump-repair.jpg";
+import elWiring from "@/assets/services/home/electrician/wiring.jpg";
+import elHouseElec from "@/assets/services/home/electrician/house-elec.jpg";
+import elPillarLights from "@/assets/services/home/electrician/pillar-lights.jpg";
+import elFancyLights from "@/assets/services/home/electrician/fancy-lights.jpg";
+import elHoodRepair from "@/assets/services/home/electrician/hood-repair.jpg";
+import elHoodInstall from "@/assets/services/home/electrician/hood-install.jpg";
+import elPowerPlug from "@/assets/services/home/electrician/power-plug.jpg";
+import elLightPlug from "@/assets/services/home/electrician/light-plug.jpg";
+import elCeilingFanRep from "@/assets/services/home/electrician/ceiling-fan-rep.jpg";
+import elTubeLight from "@/assets/services/home/electrician/tube-light.jpg";
+import elSubMeter from "@/assets/services/home/electrician/sub-meter.jpg";
+import hmCurtainRod from "@/assets/services/home/handyman/curtain-rod.jpg";
+import hmArt from "@/assets/services/home/handyman/art.jpg";
+import hmMirror from "@/assets/services/home/handyman/mirror.jpg";
+import hmPicture from "@/assets/services/home/handyman/picture.jpg";
+import hmShelf from "@/assets/services/home/handyman/shelf.jpg";
+import hmClock from "@/assets/services/home/handyman/clock.jpg";
 import carpenterImg from "@/assets/services/home/carpenter.jpg";
 import painterImg from "@/assets/services/home/painter.jpg";
 import appliancesImg from "@/assets/services/home/appliances.jpg";
@@ -311,33 +344,33 @@ export const catalog: Category[] = [
     image: electricianImg,
     parent: "home-services",
     items: [
-      { id: "el-ceiling-fan-install", name: "Ceiling Fan Installation", description: "Install ceiling fan with capacitor.", original: 1200, price: 900, rating: 4.6, image: electricianImg },
-      { id: "el-smd-lights", name: "SMD Lights Installation", description: "Install SMD / panel lights.", original: 600, price: 450, rating: 4.5, image: electricianImg },
-      { id: "el-led-tv-mount", name: "LED TV Mounting", description: "Wall mount LED/LCD TV.", original: 2000, price: 1500, rating: 4.7, image: electricianImg },
-      { id: "el-switch-button", name: "Switchboard Button Replacement", description: "Replace switch buttons.", original: 500, price: 350, rating: 4.4, image: electricianImg },
-      { id: "el-change-over", name: "Change Over Switch Installation", description: "Install changeover switch.", original: 1500, price: 1200, rating: 4.5, image: electricianImg },
-      { id: "el-pressure-motor", name: "Pressure Motor Installation", description: "Install pressure pump motor.", original: 1800, price: 1500, rating: 4.5, image: electricianImg },
-      { id: "el-single-breaker", name: "Single Phase Breaker Replacement", description: "Replace single phase breaker.", original: 1000, price: 800, rating: 4.4, image: electricianImg },
-      { id: "el-distribution-box", name: "Distribution Box Installation", description: "Install DB / distribution board.", original: 2500, price: 2000, rating: 4.6, image: electricianImg },
-      { id: "el-auto-tank-switch", name: "Water Tank Automatic Switch Installation", description: "Install auto water tank switch.", original: 1200, price: 1000, rating: 4.5, image: electricianImg },
-      { id: "el-wm-repair", name: "Washing Machine Repairing", description: "Repair washing machine faults.", original: 1500, price: 1200, rating: 4.4, image: electricianImg },
-      { id: "el-fan-dimmer", name: "Fan Dimmer Switch Installation", description: "Install fan dimmer / regulator.", original: 700, price: 500, rating: 4.4, image: electricianImg },
-      { id: "el-ups-repair", name: "UPS Repairing", description: "Repair UPS units.", original: 1500, price: 1200, rating: 4.4, image: electricianImg },
-      { id: "el-ups-install", name: "UPS Installation", description: "Install home UPS.", original: 1800, price: 1500, rating: 4.5, image: electricianImg },
-      { id: "el-exhaust-fan", name: "Exhaust Fan Installation", description: "Install exhaust fan.", original: 1000, price: 800, rating: 4.4, image: electricianImg },
-      { id: "el-new-house-wiring", name: "New House Wiring", description: "Complete new wiring for a home.", original: 700, price: 500, rating: 4.7, unit: "/ Point", image: electricianImg },
-      { id: "el-pump-repair", name: "Water Pump Repairing", description: "Repair water pump.", original: 1500, price: 1200, rating: 4.4, image: electricianImg },
-      { id: "el-wiring", name: "Electrical Wiring", description: "General electrical wiring work.", original: 1000, price: 800, rating: 4.4, image: electricianImg },
-      { id: "el-house-elec", name: "House Electric Work", description: "House electric maintenance.", original: 1000, price: 800, rating: 4.4, image: electricianImg },
-      { id: "el-pillar-lights", name: "Door Pillar Lights", description: "Install door / pillar lights.", original: 1200, price: 1000, rating: 4.5, image: electricianImg },
-      { id: "el-fancy-lights", name: "Fancy Light Installation", description: "Install decorative fancy lights.", original: 1800, price: 1500, rating: 4.6, image: electricianImg },
-      { id: "el-hood-repair", name: "Kitchen Hood Repairing", description: "Repair kitchen hood.", original: 1500, price: 1200, rating: 4.4, image: electricianImg },
-      { id: "el-hood-install", name: "Kitchen Hood Installation", description: "Install new kitchen hood.", original: 2000, price: 1700, rating: 4.5, image: electricianImg },
-      { id: "el-power-plug", name: "Power Plug Installation", description: "Install power plug socket.", original: 700, price: 500, rating: 4.4, image: electricianImg },
-      { id: "el-light-plug", name: "Light Plug Installation", description: "Install light plug socket.", original: 600, price: 450, rating: 4.4, image: electricianImg },
-      { id: "el-ceiling-fan-rep", name: "Ceiling Fan Repairing", description: "Repair ceiling fan.", original: 1000, price: 800, rating: 4.4, image: electricianImg },
-      { id: "el-tube-light", name: "Tube Light Installation / Replacement / Repairing", description: "Tube light services.", original: 700, price: 500, rating: 4.4, image: electricianImg },
-      { id: "el-sub-meter", name: "Sub-Meter Installation", description: "Install electricity sub-meter.", original: 2000, price: 1700, rating: 4.5, image: electricianImg },
+      { id: "el-ceiling-fan-install", name: "Ceiling Fan Installation", description: "Install ceiling fan with capacitor.", original: 1200, price: 900, rating: 4.6, image: elCeilingFanInstall },
+      { id: "el-smd-lights", name: "SMD Lights Installation", description: "Install SMD / panel lights.", original: 600, price: 450, rating: 4.5, image: elSmdLights },
+      { id: "el-led-tv-mount", name: "LED TV Mounting", description: "Wall mount LED/LCD TV.", original: 2000, price: 1500, rating: 4.7, image: elLedTvMount },
+      { id: "el-switch-button", name: "Switchboard Button Replacement", description: "Replace switch buttons.", original: 500, price: 350, rating: 4.4, image: elSwitchButton },
+      { id: "el-change-over", name: "Change Over Switch Installation", description: "Install changeover switch.", original: 1500, price: 1200, rating: 4.5, image: elChangeOver },
+      { id: "el-pressure-motor", name: "Pressure Motor Installation", description: "Install pressure pump motor.", original: 1800, price: 1500, rating: 4.5, image: elPressureMotor },
+      { id: "el-single-breaker", name: "Single Phase Breaker Replacement", description: "Replace single phase breaker.", original: 1000, price: 800, rating: 4.4, image: elSingleBreaker },
+      { id: "el-distribution-box", name: "Distribution Box Installation", description: "Install DB / distribution board.", original: 2500, price: 2000, rating: 4.6, image: elDistributionBox },
+      { id: "el-auto-tank-switch", name: "Water Tank Automatic Switch Installation", description: "Install auto water tank switch.", original: 1200, price: 1000, rating: 4.5, image: elAutoTankSwitch },
+      { id: "el-wm-repair", name: "Washing Machine Repairing", description: "Repair washing machine faults.", original: 1500, price: 1200, rating: 4.4, image: elWmRepair },
+      { id: "el-fan-dimmer", name: "Fan Dimmer Switch Installation", description: "Install fan dimmer / regulator.", original: 700, price: 500, rating: 4.4, image: elFanDimmer },
+      { id: "el-ups-repair", name: "UPS Repairing", description: "Repair UPS units.", original: 1500, price: 1200, rating: 4.4, image: elUpsRepair },
+      { id: "el-ups-install", name: "UPS Installation", description: "Install home UPS.", original: 1800, price: 1500, rating: 4.5, image: elUpsInstall },
+      { id: "el-exhaust-fan", name: "Exhaust Fan Installation", description: "Install exhaust fan.", original: 1000, price: 800, rating: 4.4, image: elExhaustFan },
+      { id: "el-new-house-wiring", name: "New House Wiring", description: "Complete new wiring for a home.", original: 700, price: 500, rating: 4.7, unit: "/ Point", image: elNewHouseWiring },
+      { id: "el-pump-repair", name: "Water Pump Repairing", description: "Repair water pump.", original: 1500, price: 1200, rating: 4.4, image: elPumpRepair },
+      { id: "el-wiring", name: "Electrical Wiring", description: "General electrical wiring work.", original: 1000, price: 800, rating: 4.4, image: elWiring },
+      { id: "el-house-elec", name: "House Electric Work", description: "House electric maintenance.", original: 1000, price: 800, rating: 4.4, image: elHouseElec },
+      { id: "el-pillar-lights", name: "Door Pillar Lights", description: "Install door / pillar lights.", original: 1200, price: 1000, rating: 4.5, image: elPillarLights },
+      { id: "el-fancy-lights", name: "Fancy Light Installation", description: "Install decorative fancy lights.", original: 1800, price: 1500, rating: 4.6, image: elFancyLights },
+      { id: "el-hood-repair", name: "Kitchen Hood Repairing", description: "Repair kitchen hood.", original: 1500, price: 1200, rating: 4.4, image: elHoodRepair },
+      { id: "el-hood-install", name: "Kitchen Hood Installation", description: "Install new kitchen hood.", original: 2000, price: 1700, rating: 4.5, image: elHoodInstall },
+      { id: "el-power-plug", name: "Power Plug Installation", description: "Install power plug socket.", original: 700, price: 500, rating: 4.4, image: elPowerPlug },
+      { id: "el-light-plug", name: "Light Plug Installation", description: "Install light plug socket.", original: 600, price: 450, rating: 4.4, image: elLightPlug },
+      { id: "el-ceiling-fan-rep", name: "Ceiling Fan Repairing", description: "Repair ceiling fan.", original: 1000, price: 800, rating: 4.4, image: elCeilingFanRep },
+      { id: "el-tube-light", name: "Tube Light Installation / Replacement / Repairing", description: "Tube light services.", original: 700, price: 500, rating: 4.4, image: elTubeLight },
+      { id: "el-sub-meter", name: "Sub-Meter Installation", description: "Install electricity sub-meter.", original: 2000, price: 1700, rating: 4.5, image: elSubMeter },
     ],
   },
   {
@@ -347,12 +380,12 @@ export const catalog: Category[] = [
     image: handymanImg,
     parent: "home-services",
     items: [
-      { id: "hm-curtain-rod", name: "Curtain Rod Installation", description: "Install curtain rod with brackets.", original: 900, price: 700, rating: 4.5, image: handymanImg },
-      { id: "hm-art", name: "Art Hanging", description: "Hang artwork on the wall.", original: 600, price: 450, rating: 4.5, image: handymanImg },
-      { id: "hm-mirror", name: "Mirror Hanging", description: "Securely hang mirror.", original: 800, price: 600, rating: 4.5, image: handymanImg },
-      { id: "hm-picture", name: "Picture Hanging", description: "Hang picture frames.", original: 500, price: 350, rating: 4.4, image: handymanImg },
-      { id: "hm-shelf", name: "Shelf Hanging", description: "Install wall shelf.", original: 900, price: 700, rating: 4.5, image: handymanImg },
-      { id: "hm-clock", name: "Room Clock Hanging", description: "Hang wall clock.", original: 400, price: 300, rating: 4.4, image: handymanImg },
+      { id: "hm-curtain-rod", name: "Curtain Rod Installation", description: "Install curtain rod with brackets.", original: 900, price: 700, rating: 4.5, image: hmCurtainRod },
+      { id: "hm-art", name: "Art Hanging", description: "Hang artwork on the wall.", original: 600, price: 450, rating: 4.5, image: hmArt },
+      { id: "hm-mirror", name: "Mirror Hanging", description: "Securely hang mirror.", original: 800, price: 600, rating: 4.5, image: hmMirror },
+      { id: "hm-picture", name: "Picture Hanging", description: "Hang picture frames.", original: 500, price: 350, rating: 4.4, image: hmPicture },
+      { id: "hm-shelf", name: "Shelf Hanging", description: "Install wall shelf.", original: 900, price: 700, rating: 4.5, image: hmShelf },
+      { id: "hm-clock", name: "Room Clock Hanging", description: "Hang wall clock.", original: 400, price: 300, rating: 4.4, image: hmClock },
     ],
   },
   {
