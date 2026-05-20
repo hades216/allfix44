@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShoppingCart, Plus, Minus, Trash2, MessageCircle, Loader2 } from "lucide-react";
+import { ShoppingCart, Plus, Minus, Trash2, MessageCircle, Loader2, ArrowLeft } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
