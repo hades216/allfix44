@@ -105,6 +105,46 @@ import painterImg from "@/assets/services/home/painter.jpg";
 import appliancesImg from "@/assets/services/home/appliances.jpg";
 import geyserImg from "@/assets/services/home/geyser.jpg";
 import pestImg from "@/assets/services/home/pest.jpg";
+import cpWardrobe from "@/assets/services/home/carpenter/wardrobe.jpg";
+import cpDoorInstall from "@/assets/services/home/carpenter/door-install.jpg";
+import cpDoorRepair from "@/assets/services/home/carpenter/door-repair.jpg";
+import cpWork from "@/assets/services/home/carpenter/work.jpg";
+import cpDrawerRep from "@/assets/services/home/carpenter/drawer-repair.jpg";
+import cpFurniture from "@/assets/services/home/carpenter/furniture.jpg";
+import cpRoomLock from "@/assets/services/home/carpenter/room-lock.jpg";
+import cpDrawerLock from "@/assets/services/home/carpenter/drawer-lock.jpg";
+import cpCatcher from "@/assets/services/home/carpenter/catcher.jpg";
+import ptOutdoor from "@/assets/services/home/painter/outdoor.jpg";
+import ptIndoor from "@/assets/services/home/painter/indoor.jpg";
+import ptFurnPolish from "@/assets/services/home/painter/furn-polish.jpg";
+import ptGray from "@/assets/services/home/painter/gray.jpg";
+import ptDoorPolish from "@/assets/services/home/painter/door-polish.jpg";
+import ptTables from "@/assets/services/home/painter/tables.jpg";
+import ptWindow from "@/assets/services/home/painter/window.jpg";
+import ptWoodenDoor from "@/assets/services/home/painter/wooden-door.jpg";
+import apCookRange from "@/assets/services/home/appliances/cook-range.jpg";
+import apWmRepair from "@/assets/services/home/appliances/wm-repair.jpg";
+import apOvenService from "@/assets/services/home/appliances/oven-service.jpg";
+import apHoodInstall from "@/assets/services/home/appliances/hood-install.jpg";
+import apHoodRepair from "@/assets/services/home/appliances/hood-repair.jpg";
+import apWmGeneral from "@/assets/services/home/appliances/wm-general.jpg";
+import gyInstService from "@/assets/services/home/geyser/inst-service.jpg";
+import gyInstInstall from "@/assets/services/home/geyser/inst-install.jpg";
+import gyGasService from "@/assets/services/home/geyser/gas-service.jpg";
+import gyGasInstall from "@/assets/services/home/geyser/gas-install.jpg";
+import gyElecRepair from "@/assets/services/home/geyser/elec-repair.jpg";
+import gyElecInstall from "@/assets/services/home/geyser/elec-install.jpg";
+import gyElecDismount from "@/assets/services/home/geyser/elec-dismount.jpg";
+import gyGasRepair from "@/assets/services/home/geyser/gas-repair.jpg";
+import gyGasDismount from "@/assets/services/home/geyser/gas-dismount.jpg";
+import gyInstRepair from "@/assets/services/home/geyser/inst-repair.jpg";
+import gyElecService from "@/assets/services/home/geyser/elec-service.jpg";
+import gyInstDismount from "@/assets/services/home/geyser/inst-dismount.jpg";
+import pcGeneral from "@/assets/services/home/pest/general.jpg";
+import pcCockroach from "@/assets/services/home/pest/cockroach.jpg";
+import pcBedbug from "@/assets/services/home/pest/bedbug.jpg";
+import pcDengue from "@/assets/services/home/pest/dengue.jpg";
+import pcDisinfect from "@/assets/services/home/pest/disinfect.jpg";
 
 const r = (min = 4.3, max = 4.9) =>
   Math.round((min + Math.random() * (max - min)) * 10) / 10;
@@ -395,15 +435,15 @@ export const catalog: Category[] = [
     image: carpenterImg,
     parent: "home-services",
     items: [
-      { id: "cp-wardrobe", name: "Wardrobe Repairing", description: "Repair wardrobe doors / hinges.", original: 2000, price: 1500, rating: 4.5, image: carpenterImg },
-      { id: "cp-door-install", name: "Door Installation", description: "Install wooden door.", original: 2500, price: 2000, rating: 4.6, image: carpenterImg },
-      { id: "cp-door-repair", name: "Door Repairing", description: "Repair door / hinges / frame.", original: 1500, price: 1200, rating: 4.5, image: carpenterImg },
-      { id: "cp-work", name: "Carpenter Work", description: "General carpentry work.", original: 1500, price: 1200, rating: 4.4, image: carpenterImg },
-      { id: "cp-drawer-rep", name: "Drawer Repairing", description: "Repair drawer slides / front.", original: 1200, price: 900, rating: 4.4, image: carpenterImg },
-      { id: "cp-furniture", name: "Furniture Repairing", description: "Repair furniture pieces.", original: 1800, price: 1500, rating: 4.5, image: carpenterImg },
-      { id: "cp-room-lock", name: "Room Door Lock Installation", description: "Install door lock.", original: 1200, price: 900, rating: 4.5, image: carpenterImg },
-      { id: "cp-drawer-lock", name: "Drawer Lock Installation", description: "Install drawer lock.", original: 1000, price: 800, rating: 4.4, image: carpenterImg },
-      { id: "cp-catcher", name: "Catcher Replacement", description: "Replace door catcher.", original: 800, price: 600, rating: 4.3, image: carpenterImg },
+      { id: "cp-wardrobe", name: "Wardrobe Repairing", description: "Repair wardrobe doors / hinges.", original: 2000, price: 1500, rating: 4.5, image: cpWardrobe },
+      { id: "cp-door-install", name: "Door Installation", description: "Install wooden door.", original: 2500, price: 2000, rating: 4.6, image: cpDoorInstall },
+      { id: "cp-door-repair", name: "Door Repairing", description: "Repair door / hinges / frame.", original: 1500, price: 1200, rating: 4.5, image: cpDoorRepair },
+      { id: "cp-work", name: "Carpenter Work", description: "General carpentry work.", original: 1500, price: 1200, rating: 4.4, image: cpWork },
+      { id: "cp-drawer-rep", name: "Drawer Repairing", description: "Repair drawer slides / front.", original: 1200, price: 900, rating: 4.4, image: cpDrawerRep },
+      { id: "cp-furniture", name: "Furniture Repairing", description: "Repair furniture pieces.", original: 1800, price: 1500, rating: 4.5, image: cpFurniture },
+      { id: "cp-room-lock", name: "Room Door Lock Installation", description: "Install door lock.", original: 1200, price: 900, rating: 4.5, image: cpRoomLock },
+      { id: "cp-drawer-lock", name: "Drawer Lock Installation", description: "Install drawer lock.", original: 1000, price: 800, rating: 4.4, image: cpDrawerLock },
+      { id: "cp-catcher", name: "Catcher Replacement", description: "Replace door catcher.", original: 800, price: 600, rating: 4.3, image: cpCatcher },
     ],
   },
   {
@@ -413,14 +453,14 @@ export const catalog: Category[] = [
     image: painterImg,
     parent: "home-services",
     items: [
-      { id: "pt-out", name: "House Paint (Outdoor)", description: "Per sqft outdoor house painting.", original: 35, price: 25, rating: 4.6, unit: "/ SQFT", image: painterImg },
-      { id: "pt-in", name: "House Paint (Indoor)", description: "Per sqft indoor house painting.", original: 30, price: 22, rating: 4.6, unit: "/ SQFT", image: painterImg },
-      { id: "pt-furn-polish", name: "Furniture Polishing", description: "Polish furniture to new shine.", original: 3500, price: 2800, rating: 4.6, image: painterImg },
-      { id: "pt-gray", name: "Gray Structure Paint", description: "Gray structure / fresh paint.", original: 28, price: 20, rating: 4.5, unit: "/ SQFT", image: painterImg },
-      { id: "pt-door-polish", name: "Door Polish", description: "Wooden door polish.", original: 1800, price: 1500, rating: 4.5, image: painterImg },
-      { id: "pt-tables", name: "Tables Polish", description: "Polish wooden tables.", original: 1500, price: 1200, rating: 4.4, image: painterImg },
-      { id: "pt-window", name: "Window Paint", description: "Window frame painting.", original: 1500, price: 1200, rating: 4.4, image: painterImg },
-      { id: "pt-wooden-door", name: "Wooden Door Paint", description: "Paint wooden door.", original: 1800, price: 1500, rating: 4.5, image: painterImg },
+      { id: "pt-out", name: "House Paint (Outdoor)", description: "Per sqft outdoor house painting.", original: 35, price: 25, rating: 4.6, unit: "/ SQFT", image: ptOutdoor },
+      { id: "pt-in", name: "House Paint (Indoor)", description: "Per sqft indoor house painting.", original: 30, price: 22, rating: 4.6, unit: "/ SQFT", image: ptIndoor },
+      { id: "pt-furn-polish", name: "Furniture Polishing", description: "Polish furniture to new shine.", original: 3500, price: 2800, rating: 4.6, image: ptFurnPolish },
+      { id: "pt-gray", name: "Gray Structure Paint", description: "Gray structure / fresh paint.", original: 28, price: 20, rating: 4.5, unit: "/ SQFT", image: ptGray },
+      { id: "pt-door-polish", name: "Door Polish", description: "Wooden door polish.", original: 1800, price: 1500, rating: 4.5, image: ptDoorPolish },
+      { id: "pt-tables", name: "Tables Polish", description: "Polish wooden tables.", original: 1500, price: 1200, rating: 4.4, image: ptTables },
+      { id: "pt-window", name: "Window Paint", description: "Window frame painting.", original: 1500, price: 1200, rating: 4.4, image: ptWindow },
+      { id: "pt-wooden-door", name: "Wooden Door Paint", description: "Paint wooden door.", original: 1800, price: 1500, rating: 4.5, image: ptWoodenDoor },
     ],
   },
   {
@@ -430,12 +470,12 @@ export const catalog: Category[] = [
     image: appliancesImg,
     parent: "home-services",
     items: [
-      { id: "ap-cook-range-rep", name: "Cooking Range Repairing", description: "Repair cooking range.", original: 2000, price: 1700, rating: 4.5, image: appliancesImg },
-      { id: "ap-wm-rep", name: "Automatic Washing Machine Repairing", description: "Repair auto washing machine.", original: 2000, price: 1700, rating: 4.5, image: appliancesImg },
-      { id: "ap-oven-serv", name: "Oven Range Services", description: "Oven range service & cleaning.", original: 1800, price: 1500, rating: 4.5, image: appliancesImg },
-      { id: "ap-hood-install", name: "Kitchen Hood Installation", description: "Install kitchen hood.", original: 2000, price: 1700, rating: 4.5, image: appliancesImg },
-      { id: "ap-hood-rep", name: "Kitchen Hood Repairing", description: "Repair kitchen hood.", original: 1500, price: 1200, rating: 4.4, image: appliancesImg },
-      { id: "ap-wm-general", name: "Automatic Washing Machine General Service", description: "Full general service.", original: 2500, price: 2000, rating: 4.6, image: appliancesImg },
+      { id: "ap-cook-range-rep", name: "Cooking Range Repairing", description: "Repair cooking range.", original: 2000, price: 1700, rating: 4.5, image: apCookRange },
+      { id: "ap-wm-rep", name: "Automatic Washing Machine Repairing", description: "Repair auto washing machine.", original: 2000, price: 1700, rating: 4.5, image: apWmRepair },
+      { id: "ap-oven-serv", name: "Oven Range Services", description: "Oven range service & cleaning.", original: 1800, price: 1500, rating: 4.5, image: apOvenService },
+      { id: "ap-hood-install", name: "Kitchen Hood Installation", description: "Install kitchen hood.", original: 2000, price: 1700, rating: 4.5, image: apHoodInstall },
+      { id: "ap-hood-rep", name: "Kitchen Hood Repairing", description: "Repair kitchen hood.", original: 1500, price: 1200, rating: 4.4, image: apHoodRepair },
+      { id: "ap-wm-general", name: "Automatic Washing Machine General Service", description: "Full general service.", original: 2500, price: 2000, rating: 4.6, image: apWmGeneral },
     ],
   },
   {
@@ -445,18 +485,18 @@ export const catalog: Category[] = [
     image: geyserImg,
     parent: "home-services",
     items: [
-      { id: "gy-inst-service", name: "Instant Geyser Service", description: "Instant geyser general service.", original: 1800, price: 1500, rating: 4.5, image: geyserImg },
-      { id: "gy-inst-install", name: "Instant Geyser Installation", description: "Install instant geyser.", original: 2200, price: 1800, rating: 4.6, image: geyserImg },
-      { id: "gy-gas-service", name: "Gas Geyser Service", description: "Gas geyser service.", original: 1800, price: 1500, rating: 4.5, image: geyserImg },
-      { id: "gy-gas-install", name: "Gas Geyser Installation", description: "Install gas geyser.", original: 2200, price: 1800, rating: 4.6, image: geyserImg },
-      { id: "gy-elec-repair", name: "Instant Electric Geyser Repairing", description: "Repair instant electric geyser.", original: 2000, price: 1700, rating: 4.5, image: geyserImg },
-      { id: "gy-elec-install", name: "Instant Electric Geyser Installation", description: "Install instant electric geyser.", original: 2200, price: 1800, rating: 4.5, image: geyserImg },
-      { id: "gy-elec-dismount", name: "Instant Electric Geyser Dismounting", description: "Dismount instant electric geyser.", original: 1500, price: 1200, rating: 4.4, image: geyserImg },
-      { id: "gy-gas-repair", name: "Gas Geyser Repairing", description: "Repair gas geyser.", original: 2000, price: 1700, rating: 4.5, image: geyserImg },
-      { id: "gy-gas-dismount", name: "Gas Geyser Dismounting", description: "Dismount gas geyser.", original: 1500, price: 1200, rating: 4.4, image: geyserImg },
-      { id: "gy-inst-repair", name: "Instant Geyser Repairing", description: "Repair instant geyser.", original: 2000, price: 1700, rating: 4.5, image: geyserImg },
-      { id: "gy-elec-service", name: "Instant Electric Geyser Service", description: "Instant electric geyser service.", original: 1800, price: 1500, rating: 4.5, image: geyserImg },
-      { id: "gy-inst-dismount", name: "Instant Geyser Dismounting", description: "Dismount instant geyser.", original: 1500, price: 1200, rating: 4.4, image: geyserImg },
+      { id: "gy-inst-service", name: "Instant Geyser Service", description: "Instant geyser general service.", original: 1800, price: 1500, rating: 4.5, image: gyInstService },
+      { id: "gy-inst-install", name: "Instant Geyser Installation", description: "Install instant geyser.", original: 2200, price: 1800, rating: 4.6, image: gyInstInstall },
+      { id: "gy-gas-service", name: "Gas Geyser Service", description: "Gas geyser service.", original: 1800, price: 1500, rating: 4.5, image: gyGasService },
+      { id: "gy-gas-install", name: "Gas Geyser Installation", description: "Install gas geyser.", original: 2200, price: 1800, rating: 4.6, image: gyGasInstall },
+      { id: "gy-elec-repair", name: "Instant Electric Geyser Repairing", description: "Repair instant electric geyser.", original: 2000, price: 1700, rating: 4.5, image: gyElecRepair },
+      { id: "gy-elec-install", name: "Instant Electric Geyser Installation", description: "Install instant electric geyser.", original: 2200, price: 1800, rating: 4.5, image: gyElecInstall },
+      { id: "gy-elec-dismount", name: "Instant Electric Geyser Dismounting", description: "Dismount instant electric geyser.", original: 1500, price: 1200, rating: 4.4, image: gyElecDismount },
+      { id: "gy-gas-repair", name: "Gas Geyser Repairing", description: "Repair gas geyser.", original: 2000, price: 1700, rating: 4.5, image: gyGasRepair },
+      { id: "gy-gas-dismount", name: "Gas Geyser Dismounting", description: "Dismount gas geyser.", original: 1500, price: 1200, rating: 4.4, image: gyGasDismount },
+      { id: "gy-inst-repair", name: "Instant Geyser Repairing", description: "Repair instant geyser.", original: 2000, price: 1700, rating: 4.5, image: gyInstRepair },
+      { id: "gy-elec-service", name: "Instant Electric Geyser Service", description: "Instant electric geyser service.", original: 1800, price: 1500, rating: 4.5, image: gyElecService },
+      { id: "gy-inst-dismount", name: "Instant Geyser Dismounting", description: "Dismount instant geyser.", original: 1500, price: 1200, rating: 4.4, image: gyInstDismount },
     ],
   },
   {
@@ -466,11 +506,11 @@ export const catalog: Category[] = [
     image: pestImg,
     parent: "home-services",
     items: [
-      { id: "pc-general", name: "General Fumigation", description: "Whole-home general fumigation.", original: 6000, price: 4500, rating: 4.7, image: pestImg },
-      { id: "pc-cockroach", name: "Cockroach Treatment", description: "Targeted cockroach treatment.", original: 4500, price: 3500, rating: 4.6, image: pestImg },
-      { id: "pc-bedbug", name: "Bed Bugs Treatment", description: "Bed bug elimination treatment.", original: 5500, price: 4500, rating: 4.6, image: pestImg },
-      { id: "pc-dengue", name: "Dengue Spray", description: "Dengue mosquito spray.", original: 5000, price: 4000, rating: 4.6, image: pestImg },
-      { id: "pc-disinfect", name: "Disinfection Services", description: "Full home disinfection service.", original: 6000, price: 5000, rating: 4.7, image: pestImg },
+      { id: "pc-general", name: "General Fumigation", description: "Whole-home general fumigation.", original: 6000, price: 4500, rating: 4.7, image: pcGeneral },
+      { id: "pc-cockroach", name: "Cockroach Treatment", description: "Targeted cockroach treatment.", original: 4500, price: 3500, rating: 4.6, image: pcCockroach },
+      { id: "pc-bedbug", name: "Bed Bugs Treatment", description: "Bed bug elimination treatment.", original: 5500, price: 4500, rating: 4.6, image: pcBedbug },
+      { id: "pc-dengue", name: "Dengue Spray", description: "Dengue mosquito spray.", original: 5000, price: 4000, rating: 4.6, image: pcDengue },
+      { id: "pc-disinfect", name: "Disinfection Services", description: "Full home disinfection service.", original: 6000, price: 5000, rating: 4.7, image: pcDisinfect },
     ],
   },
 ];
