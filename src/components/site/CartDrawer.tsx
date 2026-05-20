@@ -64,12 +64,24 @@ export function CartDrawer() {
 
   return (
     <Sheet open={isOpen} onOpenChange={setOpen}>
-      <SheetContent className="w-full sm:max-w-md flex flex-col p-0 gap-0">
+      <SheetContent className="w-full sm:max-w-md flex flex-col p-0 gap-0 [&>button.absolute]:hidden">
         <SheetHeader className="px-5 py-4 border-b">
-          <SheetTitle className="flex items-center gap-2">
-            <ShoppingCart className="h-5 w-5 text-brand" />
-            {step === "cart" ? `Your Cart (${count})` : "Checkout"}
-          </SheetTitle>
+          <div className="flex items-center justify-between gap-3">
+            <SheetTitle className="flex items-center gap-2">
+              <ShoppingCart className="h-5 w-5 text-brand" />
+              {step === "cart" ? `Your Cart (${count})` : "Checkout"}
+            </SheetTitle>
+            <Button
+              onClick={() => setOpen(false)}
+              variant="outline"
+              size="sm"
+              className="h-9 rounded-full gap-1.5 px-3 font-semibold"
+              aria-label="Back to services"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back
+            </Button>
+          </div>
         </SheetHeader>
 
         {items.length === 0 ? (
