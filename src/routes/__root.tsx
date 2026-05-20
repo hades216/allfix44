@@ -4,14 +4,17 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 import { CartProvider, useCart } from "@/components/site/cart/CartContext";
 import { CartDrawer } from "@/components/site/CartDrawer";
 import { FloatingCTA } from "@/components/site/FloatingCTA";
+import { MobileCartBar } from "@/components/site/MobileCartBar";
 import { Toaster } from "@/components/ui/sonner";
 import { ShoppingCart } from "lucide-react";
 
@@ -118,18 +121,26 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
       <CartProvider>
         <div className="min-h-screen bg-background flex flex-col">
           <SiteNav />
-          <main className="flex-1">
+          <main className="flex-1 pb-24 sm:pb-0">
             <Outlet />
           </main>
           <SiteFooter />
         </div>
         <FloatingCTA />
+        <MobileCartBar />
         <CartDrawer />
         <Toaster richColors position="top-center" />
       </CartProvider>
